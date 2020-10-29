@@ -18,6 +18,10 @@ if (!expr) {
 }
 
 let token = parse(expr)
+if (prog === "debug") {
+	console.log("token: " + JSON.stringify(token))
+}
+
 let fn = fnify(token)
 if (prog === "table") {
 	// do nothing; everything is handled outside of this conditional
@@ -39,7 +43,6 @@ if (prog === "table") {
 	process.exit()
 } else if (prog === "debug") {
 	let restr = strify(token)
-	console.log("token: " + JSON.stringify(token))
 	console.log("restr: " + restr)
 	console.log("fnify: " + fn)
 } else if (prog) {
