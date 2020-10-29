@@ -10,5 +10,5 @@ console.log("token: " + JSON.stringify(token))
 let restr = strify(token)
 console.log("restr: " + restr)
 
-let fn = fnify(expr)
+let fn = fnify(token)
 console.log("fn: " + fn)
