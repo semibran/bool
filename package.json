@@ -1,0 +1,11 @@
+{
+  "name": "boolean",
+  "version": "0.1.0",
+  "description": "tiny boolean expression parser",
+  "repository": "semibran/boolean",
+  "author": "semibran",
+  "license": "MIT",
+  "main": "lib/scaffy.js",
+  "bin": "bin/index.js",
+  "keywords": []
+}
