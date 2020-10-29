@@ -4,6 +4,10 @@ const fnify = require("../lib/fn")
 const reduceargs = require("../lib/args")
 
 let expr = process.argv[2]
+if (!expr) {
+	console.log("Enter a boolean expression, eg. x+y")
+	process.exit()
+}
 
 let token = parse(expr)
 // console.log("token: " + JSON.stringify(token))
