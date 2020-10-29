@@ -2,9 +2,11 @@ const parse = require("../lib/parse")
 const strify = require("../lib/strify")
 const fnify = require("../lib/fn")
 const reduceargs = require("../lib/args")
+const bitstr = require("../lib/bitstr")
 
 let prog = process.argv[2]
 let expr = process.argv[3]
+let expr2 = process.argv[4]
 if (prog && !expr) {
 	expr = prog
 	prog = null
@@ -17,7 +19,16 @@ if (!expr) {
 
 let token = parse(expr)
 let fn = fnify(token)
-if (prog === "parse") {
+if (prog === "table") {
+	// do nothing; everything is handled outside of this conditional
+} else if (prog === "id") {
+	console.log(bitstr(token))
+	process.exit()
+} else if (prog === "equals") {
+	let token2 = parse(expr2)
+	console.log(bitstr(token) === bitstr(token2))
+	process.exit()
+} else if (prog === "parse") {
 	console.log(JSON.stringify(token) + "\n")
 	process.exit()
 } else if (prog === "fnify") {
@@ -30,7 +41,7 @@ if (prog === "parse") {
 	console.log("fnify: " + fn)
 } else if (prog) {
 	console.log("Unrecognized program " + prog)
-	console.log("Valid values are parse, fnify, and debug\n")
+	console.log("Valid values are table, equals, id, parse, fnify, and debug\n")
 	process.exit()
 }
 
