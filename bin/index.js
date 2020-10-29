@@ -5,15 +5,15 @@ const reduceargs = require("../lib/args")
 
 let expr = process.argv[2]
 if (!expr) {
-	console.log("Enter a boolean expression, eg. x+y")
+	console.log("Enter a valid boolean expression, eg. x+y")
 	process.exit()
 }
 
 let token = parse(expr)
-// console.log("token: " + JSON.stringify(token))
+console.log("token: " + JSON.stringify(token))
 
-// let restr = strify(token)
-// console.log("restr: " + restr)
+let restr = strify(token)
+console.log("restr: " + restr)
 
 let args = reduceargs(token)
 let argc = args.length
@@ -30,3 +30,5 @@ for (let i = 0; i < perms; i++) {
 	let argv = str.split("").map(Number)
 	console.log(argv.join(" "), Number(fn(...argv)))
 }
+
+console.log()

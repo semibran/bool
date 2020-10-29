@@ -1,5 +1,5 @@
 {
-  "name": "boolean",
+  "name": "truth-table",
   "version": "0.1.0",
   "description": "tiny boolean expression parser",
   "repository": "semibran/boolean",
