@@ -18,7 +18,7 @@ console.log("restr: " + restr)
 let args = reduceargs(token)
 let argc = args.length
 let fn = fnify(token)
-// console.log("fn: " + fn)
+console.log("fnify: " + fn)
 
 console.log(args.join(" ") + " " + expr)
 let perms = Math.pow(2, argc)
