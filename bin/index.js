@@ -20,6 +20,7 @@ if (!expr) {
 let token = parse(expr)
 if (prog === "debug") {
 	console.log("token: " + JSON.stringify(token))
+	console.log("restr: " + strify(token))
 }
 
 let fn = fnify(token)
@@ -42,8 +43,6 @@ if (prog === "table") {
 	console.log(fn + "\n")
 	process.exit()
 } else if (prog === "debug") {
-	let restr = strify(token)
-	console.log("restr: " + restr)
 	console.log("fnify: " + fn)
 } else if (prog) {
 	console.log("Unrecognized program " + prog)
