@@ -22,6 +22,9 @@ let fn = fnify(token)
 if (prog === "table") {
 	// do nothing; everything is handled outside of this conditional
 } else if (prog === "id") {
+	console.log(parseInt(bitstr(token), 2))
+	process.exit()
+} else if (prog === "bitstr") {
 	console.log(bitstr(token))
 	process.exit()
 } else if (prog === "equals") {
@@ -41,7 +44,7 @@ if (prog === "table") {
 	console.log("fnify: " + fn)
 } else if (prog) {
 	console.log("Unrecognized program " + prog)
-	console.log("Valid values are table, equals, id, parse, fnify, and debug\n")
+	console.log("Valid values are table, equals, id, bitstr, parse, fnify, and debug\n")
 	process.exit()
 }
 
