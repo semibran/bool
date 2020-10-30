@@ -9,7 +9,7 @@ const bitstr = require("../lib/bitstr")
 let prog = process.argv[2]
 let expr = process.argv[3]
 let expr2 = process.argv[4]
-if (prog && !expr) {
+if (prog && !expr && prog !== "help") {
 	expr = prog
 	prog = null
 }
