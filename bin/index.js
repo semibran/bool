@@ -1,3 +1,5 @@
+const fs = require("fs")
+const path = require("path")
 const parse = require("../lib/parse")
 const strify = require("../lib/strify")
 const fnify = require("../lib/fn")
@@ -12,8 +14,8 @@ if (prog && !expr) {
 	prog = null
 }
 
-if (!expr) {
-	console.log("Enter a valid boolean expression, eg. x+y")
+if (!expr || prog === "help") {
+	console.log(fs.readFileSync(path.join(__dirname, "./help.txt"), "utf-8"))
 	process.exit()
 }
 
