@@ -3,9 +3,10 @@
 
 ![example cli usage](./term.png)
 
-## usage
+## CLI
 ```sh
-$ bool [program] ...exprs
+usage:
+  $ bool [program] ...exprs
 
 programs (defaults to table):
   help     show this help message
