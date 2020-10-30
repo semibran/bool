@@ -1,8 +1,8 @@
 {
-  "name": "truth-table",
+  "name": "bool",
   "version": "0.1.0",
   "description": "tiny boolean expression parser",
-  "repository": "semibran/boolean",
+  "repository": "semibran/bool",
   "author": "semibran",
   "license": "MIT",
   "main": "lib/scaffy.js",

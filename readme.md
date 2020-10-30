@@ -1,2 +1,2 @@
-# boolean
+# bool
 > tiny boolean expression parser
