@@ -1,6 +1,8 @@
 # bool
 > tiny boolean expression parser
 
+![example cli usage](./term.png)
+
 ## usage
 ```sh
 $ bool [program] ...exprs
