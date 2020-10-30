@@ -5,7 +5,6 @@
   "repository": "semibran/bool",
   "author": "semibran",
   "license": "MIT",
-  "main": "lib/scaffy.js",
   "bin": "bin/index.js",
   "keywords": []
 }
