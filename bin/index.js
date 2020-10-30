@@ -5,6 +5,7 @@ const strify = require("../lib/strify")
 const fnify = require("../lib/fn")
 const reduceargs = require("../lib/args")
 const bitstr = require("../lib/bitstr")
+const equals = require("../lib/equals")
 
 let prog = process.argv[2]
 let expr = process.argv[3]
@@ -36,7 +37,7 @@ if (prog === "table") {
 	process.exit()
 } else if (prog === "equals") {
 	let token2 = parse(expr2)
-	console.log(bitstr(token) === bitstr(token2))
+	console.log(equals(token, token2))
 	process.exit()
 } else if (prog === "parse") {
 	console.log(JSON.stringify(token) + "\n")
